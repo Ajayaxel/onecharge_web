@@ -75,18 +75,18 @@ const WhyChoose = () => {
     }
 
     return (
-        <section className="w-full bg-white h-screen lg:h-screen flex items-center py-6 md:py-8 lg:py-10">
+        <section className="w-full bg-white h-screen lg:h-screen flex items-center py-6 md:py-8 lg:py-10 mt-20">
             <div className="container mx-auto px-4 md:px-6 w-full">
 
 
 
                 {/* Grey Container with Carousel */}
-                <div className="bg-[#F5F5F5] rounded-lg pl-4 pr-0 md:pl-8 md:pr-0 lg:pl-12 lg:pr-0 py-4 md:py-6 lg:py-12 flex flex-col min-h-[600px] md:min-h-[700px] overflow-hidden" style={{ maxHeight: 'calc(100vh - 120px)' }}>
+                <div className="bg-[#F5F5F5] rounded-lg px-4 md:px-8 lg:px-12 py-4 md:py-6 lg:py-10 flex flex-col min-h-[400px] md:min-h-[500px] overflow-hidden">
                     {/* Header aligned with card content */}
-                    <div className="mb-8 md:mb-10 lg:mb-12 flex justify-center">
-                        <div className="w-full max-w-[1192px] px-1 sm:px-4 md:px-8 lg:px-1">
+                    <div className="mb-6 md:mb-8 lg:mb-10 flex justify-center px-4">
+                        <div className="w-full max-w-[1192px]">
                             <motion.h2
-                                className="text-3xl sm:text-4xl md:text-5xl lg:text-[46px] font-bold text-black mb-2"
+                                className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-bold text-black mb-3 tracking-tight"
                                 initial="hidden"
                                 whileInView="visible"
                                 viewport={{ once: true, amount: 0.1 }}
@@ -95,7 +95,7 @@ const WhyChoose = () => {
                                 Why Choose 1Charge?
                             </motion.h2>
                             <motion.p
-                                className="text-sm sm:text-base md:text-lg text-black font-medium"
+                                className="text-base sm:text-lg text-gray-600 font-medium"
                                 initial="hidden"
                                 whileInView="visible"
                                 viewport={{ once: true, amount: 0.1 }}
@@ -107,59 +107,60 @@ const WhyChoose = () => {
                         </div>
                     </div>
                     {/* Carousel */}
-                    <div className="flex-1 flex items-center ">
+                    <div className="flex-1 flex items-center justify-center w-full">
                         <Swiper
                             modules={[Pagination, Autoplay, Navigation]}
-                            spaceBetween={10}
-                            slidesPerView={1.1}
-                            centeredSlides={true}
+                            spaceBetween={20}
+                            slidesPerView={1}
                             pagination={{
                                 clickable: true,
                                 bulletActiveClass: 'swiper-pagination-bullet-active-custom'
                             }}
                             autoplay={{
-                                delay: 7000,
+                                delay: 5000,
                                 disableOnInteraction: false,
                             }}
                             navigation={false}
                             loop={true}
-                            className="why-choose-swiper w-full "
+                            className="why-choose-swiper w-full"
                         >
                             {features.map((feature) => (
-                                <SwiperSlide key={feature.id}>
-                                    <div className="flex justify-center h-full">
-                                        <div className="bg-white rounded-lg p-3 sm:p-4 md:p-6 lg:p-10 xl:p-12 w-full max-w-[1192px] flex items-center mb-0.5">
-                                            <div className="grid grid-cols-1 gap-2 sm:gap-3 md:gap-4 lg:gap-6 xl:gap-10 items-center w-full">
-                                                {/* Phone Image - First on mobile */}
-                                                <div className="flex justify-center mb-2 sm:mb-3 lg:mb-0">
-                                                    <div className="w-[140px] h-[210px] xs:w-[160px] xs:h-[240px] sm:w-[200px] sm:h-[300px] md:w-[240px] md:h-[360px] lg:w-[280px] lg:h-[420px] xl:w-[350px] xl:h-[500px]">
-                                                        <img
-                                                            src={feature.image}
-                                                            alt={feature.title}
-                                                            className="w-full h-full object-contain"
-                                                        />
-                                                    </div>
-                                                </div>
+                                <SwiperSlide key={feature.id} className="h-full">
+                                    <div className="flex justify-center h-full px-4 lg:px-0">
+                                        <div className="bg-white rounded-[24px] p-4 md:p-6 lg:p-8 w-full max-w-[850px] flex items-center shadow-sm">
+                                            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6 items-center w-full">
 
-                                                {/* Text Content - Second on mobile */}
-                                                <div className="text-center lg:text-left">
-                                                    <div className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-8xl font-bold text-black/10 mb-1 sm:mb-2 md:mb-2 lg:mb-3 xl:mb-4">
+                                                {/* Text Content - Left on Desktop, Bottom on Mobile */}
+                                                <div className="order-2 lg:order-1 text-center lg:text-left flex flex-col justify-center">
+                                                    <div className="text-[40px] sm:text-[60px] lg:text-[80px] leading-none font-bold text-gray-200 mb-2 select-none">
                                                         {feature.number}
                                                     </div>
-                                                    <h3 className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl xl:text-[36px] font-bold text-black mb-1 sm:mb-2 md:mb-2 lg:mb-3 xl:mb-4">
+                                                    <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-black mb-2 tracking-tight">
                                                         {feature.title}
                                                     </h3>
-                                                    <p className="text-xs sm:text-sm md:text-sm lg:text-base xl:text-lg text-gray-600 mb-1.5 sm:mb-2 md:mb-3 lg:mb-4 xl:mb-6 leading-relaxed px-2 sm:px-0">
+                                                    <p className="text-xs sm:text-sm text-gray-600 mb-3 lg:mb-4 leading-relaxed max-w-md mx-auto lg:mx-0">
                                                         {feature.description}
                                                     </p>
-                                                    <ul className="space-y-0.5 xs:space-y-1 sm:space-y-1.5 md:space-y-2 lg:space-y-2 xl:space-y-3 text-left inline-block">
+                                                    <ul className="space-y-1.5">
                                                         {feature.points.map((point, index) => (
-                                                            <li key={index} className="flex items-start">
-                                                                <span className="inline-block w-1 h-1 sm:w-1.5 sm:h-1.5 rounded-full bg-black mt-1 sm:mt-1.5 mr-1.5 sm:mr-2 md:mr-3 flex-shrink-0"></span>
-                                                                <span className="text-xs sm:text-sm md:text-sm lg:text-base xl:text-lg text-gray-700">{point}</span>
+                                                            <li key={index} className="flex items-center lg:items-center justify-center lg:justify-start text-gray-700 text-xs sm:text-sm font-medium">
+                                                                <span className="w-1.5 h-1.5 rounded-full bg-gray-400 mr-2"></span>
+                                                                {point}
                                                             </li>
                                                         ))}
                                                     </ul>
+                                                </div>
+
+                                                {/* Phone Image - Right on Desktop, Top on Mobile */}
+                                                <div className="order-1 lg:order-2 flex justify-center lg:justify-end items-center">
+                                                    <div className="relative w-[120px] xs:w-[140px] sm:w-[160px] lg:w-[180px] xl:w-[200px] aspect-[9/19]">
+                                                        {/* Adding a subtle shadow/glow behind the phone if desired, assuming image has transparency */}
+                                                        <img
+                                                            src={feature.image}
+                                                            alt={feature.title}
+                                                            className="w-full h-full object-contain drop-shadow-xl"
+                                                        />
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
