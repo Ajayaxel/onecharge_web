@@ -1,14 +1,11 @@
-import Header from './Compontes/Header'
+import Layout from './Compontes/common/Layout'
 import HomePage from './pages/HomePage'
 
 function App() {
   return (
-    <div className="min-h-screen flex flex-col bg-white">
-      <Header />
-      <main className="flex-grow">
-        <HomePage />
-      </main>
-    </div>
+    <Layout>
+      <HomePage />
+    </Layout>
   )
 }
 

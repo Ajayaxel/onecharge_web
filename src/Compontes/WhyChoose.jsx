@@ -75,7 +75,7 @@ const WhyChoose = () => {
     }
 
     return (
-        <section className="w-full bg-white h-screen lg:h-screen flex items-center py-6 md:py-8 lg:py-10 mt-20">
+        <section className="w-full bg-white h-auto py-10 md:py-16 lg:py-20">
             <div className="container mx-auto px-4 md:px-6 w-full">
 
 
