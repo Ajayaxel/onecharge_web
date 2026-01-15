@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import { Menu, X, ArrowRight } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
-import logo from '../assets/logo.png'
+import logo from '../../assets/logo.png'
 
 
 const Header = () => {
