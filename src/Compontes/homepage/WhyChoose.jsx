@@ -75,16 +75,16 @@ const WhyChoose = () => {
     }
 
     return (
-        <section className="bg-[#F5F5F5] h-auto m-2 lg:mx-[10px] rounded-lg">
-            <div className="container  mx-auto px-4 md:px-6 w-full">
+        <section className="bg-[#F5F5F5] h-auto m-2 lg:mx-[10px] rounded-lg overflow-hidden">
+            <div className="w-full">
 
 
 
                 {/* Grey Container with Carousel */}
-                <div className=" rounded-lg px-4 md:px-8 lg:px-12 py-4 md:py-6 lg:py-10 flex flex-col min-h-[400px] md:min-h-[500px] overflow-hidden">
+                <div className=" w-full rounded-lg  py-4 md:py-6 lg:pt-32 lg:pb-10 flex flex-col min-h-[400px] md:min-h-[500px] overflow-hidden">
                     {/* Header aligned with card content */}
-                    <div className="mb-6 md:mb-8 lg:mb-10 flex justify-center px-4">
-                        <div className="w-full max-w-[1192px]">
+                    <div className="mb-6 md:mb-8 lg:mb-14 flex justify-center w-full">
+                        <div className="w-[90%] md:w-[70%] lg:w-[60%] px-2">
                             <motion.h2
                                 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-bold text-black mb-3 tracking-tight"
                                 initial="hidden"
@@ -110,8 +110,11 @@ const WhyChoose = () => {
                     <div className="flex-1 flex items-center justify-center w-full">
                         <Swiper
                             modules={[Pagination, Autoplay, Navigation]}
-                            spaceBetween={20}
-                            slidesPerView={1}
+                            spaceBetween={10}
+                            slidesPerView={'auto'}
+                            centeredSlides={true}
+                            loop={true}
+                            loopedSlides={2}
                             pagination={{
                                 clickable: true,
                                 bulletActiveClass: 'swiper-pagination-bullet-active-custom'
@@ -121,18 +124,18 @@ const WhyChoose = () => {
                                 disableOnInteraction: false,
                             }}
                             navigation={false}
-                            loop={true}
-                            className="why-choose-swiper w-full"
+                            className="why-choose-swiper w-full pt-10 pb-16"
                         >
                             {features.map((feature) => (
-                                <SwiperSlide key={feature.id} className="h-full">
-                                    <div className="flex justify-center h-full px-4 lg:px-0">
-                                        <div className="bg-white rounded-[24px] p-4 md:p-6 lg:p-8 w-full max-w-[850px] flex items-center shadow-sm">
+                                <SwiperSlide key={feature.id} className="h-full !w-[90%] md:!w-[70%] lg:!w-[60%]">
+                                    <div className="flex justify-center h-full px-2">
+                                        <div className="bg-white rounded-[24px] p-4 md:p-6 lg:p-8 w-full flex items-center shadow-md">
                                             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6 items-center w-full">
 
                                                 {/* Text Content - Left on Desktop, Bottom on Mobile */}
-                                                <div className="order-2 lg:order-1 text-center lg:text-left flex flex-col justify-center">
-                                                    <div className="text-[40px] sm:text-[60px] lg:text-[80px] leading-none font-bold text-gray-200 mb-2 select-none">
+                                                {/* Text Content - Left on Desktop, Bottom on Mobile */}
+                                                <div className="order-2 lg:order-1 text-center lg:text-left flex flex-col justify-center px-4 lg:pl-14 lg:pr-0">
+                                                    <div className="text-[40px] sm:text-[60px] lg:text-[80px] leading-none font-bold text-gray-200 mb-6 lg:mb-10 select-none">
                                                         {feature.number}
                                                     </div>
                                                     <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-black mb-2 tracking-tight">
@@ -141,7 +144,7 @@ const WhyChoose = () => {
                                                     <p className="text-xs sm:text-sm text-gray-600 mb-3 lg:mb-4 leading-relaxed max-w-md mx-auto lg:mx-0">
                                                         {feature.description}
                                                     </p>
-                                                    <ul className="space-y-1.5">
+                                                    <ul className="space-y-1.5 self-center lg:self-start">
                                                         {feature.points.map((point, index) => (
                                                             <li key={index} className="flex items-center lg:items-center justify-center lg:justify-start text-gray-700 text-xs sm:text-sm font-medium">
                                                                 <span className="w-1.5 h-1.5 rounded-full bg-gray-400 mr-2"></span>
@@ -153,12 +156,12 @@ const WhyChoose = () => {
 
                                                 {/* Phone Image - Right on Desktop, Top on Mobile */}
                                                 <div className="order-1 lg:order-2 flex justify-center lg:justify-end items-center">
-                                                    <div className="relative w-[120px] xs:w-[140px] sm:w-[160px] lg:w-[180px] xl:w-[200px] aspect-[9/19]">
+                                                    <div className="relative w-[120px] xs:w-[140px] sm:w-[200px] lg:w-[250px] xl:w-[300px] aspect-[382/582]">
                                                         {/* Adding a subtle shadow/glow behind the phone if desired, assuming image has transparency */}
                                                         <img
                                                             src={feature.image}
                                                             alt={feature.title}
-                                                            className="w-full h-full object-contain drop-shadow-xl"
+                                                            className="w-full h-full object-contain"
                                                         />
                                                     </div>
                                                 </div>
