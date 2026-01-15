@@ -3,7 +3,7 @@ import heroBG from '../../assets/heroBG.png'
 const Hero = () => {
     return (
         <section
-            className="relative w-full h-[92vh] flex items-end bg-cover bg-center bg-no-repeat"
+            className="relative w-full h-screen flex items-end bg-cover bg-center bg-no-repeat"
             style={{ backgroundImage: `url(${heroBG})` }}
         >
             {/* Dark overlay for better text readability */}

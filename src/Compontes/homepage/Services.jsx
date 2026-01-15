@@ -88,25 +88,22 @@ const Services = () => {
     }
 
     return (
-        <section className="w-full bg-white p-2 lg:p-[10px]">
+        <section id="services" className="bg-white rounded-lg">
 
-            {/* Section Header */}
-            <div className="text-center mb-2 rounded-lg md:mb-4 px-16 py-32 bg-[#F5F5F5]">
+            <div className="bg-[#F5F5F5] rounded-lg text-center m-2 lg:m-[10px]  py-32 ">
                 <motion.h2
-                    className="text-3xl md:text-4xl lg:text-[46px] font-semibold text-black mb-3"
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true, amount: 0.1 }}
-                    variants={textVariants}
+                    className="text-3xl md:text-5xl font-bold text-black mb-4"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
                 >
                     Our Services
                 </motion.h2>
                 <motion.p
-                    className="text-base md:text-lg lg:text-[16px] text-black font-medium"
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true, amount: 0.1 }}
-                    variants={textVariants}
+                    className="text-gray-400 text-lg max-w-2xl mx-auto"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
                     transition={{ delay: 0.2 }}
                 >
                     Comprehensive EV support when you need it most
@@ -114,48 +111,50 @@ const Services = () => {
             </div>
 
             {/* Services Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-2 lg:gap-3">
-                {services.map((service, index) => (
-                    <div
-                        key={service.id}
-                        className={`rounded-lg overflow-hidden ${service.darkBg ? 'bg-black' : 'bg-[#F5F5F5]'
-                            } p-8 md:p-10 lg:p-12 flex flex-col justify-between min-h-[400px] md:min-h-[450px] lg:min-h-[500px]`}
-                    >
-                        {/* Text Content */}
-                        <motion.div
-                            className="mb-6 text-center"
-                            initial="hidden"
-                            whileInView="visible"
-                            viewport={{ once: true, amount: 0.1 }}
-                            variants={containerVariants}
+            < div className="grid grid-cols-1 md:grid-cols-2 gap-2 lg:gap-3 m-2 lg:m-[10px]" >
+                {
+                    services.map((service, index) => (
+                        <div
+                            key={service.id}
+                            className={`rounded-lg overflow-hidden ${service.darkBg ? 'bg-black' : 'bg-[#F5F5F5]'
+                                } p-8 md:p-10 lg:p-12 flex flex-col justify-between min-h-[400px] md:min-h-[450px] lg:min-h-[500px]`}
                         >
-                            <motion.h3
-                                className={`text-2xl md:text-3xl lg:text-[36px] font-bold mb-3 ${service.darkBg ? 'text-white' : 'text-black'}`}
-                                variants={textVariants}
+                            {/* Text Content */}
+                            <motion.div
+                                className="mb-6 text-center"
+                                initial="hidden"
+                                whileInView="visible"
+                                viewport={{ once: true, amount: 0.1 }}
+                                variants={containerVariants}
                             >
-                                {service.title}
-                            </motion.h3>
-                            <motion.p
-                                className={`text-sm md:text-base ${service.darkBg ? 'text-gray-300' : 'text-gray-600'} leading-relaxed`}
-                                variants={textVariants}
-                            >
-                                {service.description}
-                            </motion.p>
-                        </motion.div>
+                                <motion.h3
+                                    className={`text-2xl md:text-3xl lg:text-[36px] font-bold mb-3 ${service.darkBg ? 'text-white' : 'text-black'}`}
+                                    variants={textVariants}
+                                >
+                                    {service.title}
+                                </motion.h3>
+                                <motion.p
+                                    className={`text-sm md:text-base ${service.darkBg ? 'text-gray-300' : 'text-gray-600'} leading-relaxed`}
+                                    variants={textVariants}
+                                >
+                                    {service.description}
+                                </motion.p>
+                            </motion.div>
 
-                        {/* Image */}
-                        <div className="flex items-end justify-center mt-auto">
-                            <img
-                                src={service.image}
-                                alt={service.title}
-                                className="w-full h-auto object-contain max-h-[250px] md:max-h-[300px]"
-                            />
+                            {/* Image */}
+                            <div className="flex items-end justify-center mt-auto">
+                                <img
+                                    src={service.image}
+                                    alt={service.title}
+                                    className="w-full h-auto object-contain max-h-[250px] md:max-h-[300px]"
+                                />
+                            </div>
                         </div>
-                    </div>
-                ))}
+                    ))
+                }
             </div>
 
-        </section>
+        </section >
     )
 }
 

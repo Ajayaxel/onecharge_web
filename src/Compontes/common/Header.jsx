@@ -32,9 +32,9 @@ const Header = () => {
     }, [])
 
     const navItems = [
-        { name: 'Services', href: '#' },
+        { name: 'Services', href: '#services' },
         { name: 'Features', href: '#' },
-        { name: 'How it Works', href: '#' },
+        { name: 'How it Works', href: '#how-it-works' },
         { name: 'Contact', href: '#' },
     ]
 
@@ -74,7 +74,10 @@ const Header = () => {
         `}>
             <div className="container mx-auto px-4 md:px-6 flex items-center h-full">
                 {/* Logo */}
-                <div className="flex items-center gap-2 flex-shrink-0">
+                <div
+                    className="flex items-center gap-2 flex-shrink-0 cursor-pointer"
+                    onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                >
                     <div className="flex items-center">
                         <img src={logo} alt="1CHARGE Logo" className="h-[24px] lg:h-[30px] w-auto object-contain" />
                     </div>
