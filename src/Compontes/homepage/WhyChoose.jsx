@@ -75,7 +75,7 @@ const WhyChoose = () => {
     }
 
     return (
-        <section className="bg-[#F5F5F5] h-auto m-2 lg:mx-[10px] rounded-lg overflow-hidden">
+        <section id="features" className="bg-[#F5F5F5] h-auto m-2 lg:mx-[10px] rounded-lg overflow-hidden">
             <div className="w-full">
 
 

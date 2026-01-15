@@ -33,9 +33,9 @@ const Header = () => {
 
     const navItems = [
         { name: 'Services', href: '#services' },
-        { name: 'Features', href: '#' },
+        { name: 'Features', href: '#features' },
         { name: 'How it Works', href: '#how-it-works' },
-        { name: 'Contact', href: '#' },
+        { name: 'Contact', href: '#contact' },
     ]
 
     const sidebarVariants = {
