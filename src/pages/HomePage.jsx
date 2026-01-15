@@ -1,7 +1,8 @@
 import React from 'react'
-import Hero from '../Compontes/Hero'
-import Services from '../Compontes/Services'
-import WhyChoose from '../Compontes/WhyChoose'
+import Hero from '../Compontes/homepage/Hero'
+import Services from '../Compontes/homepage/Services'
+import WhyChoose from '../Compontes/homepage/WhyChoose'
+import HowItWorks from '../Compontes/homepage/HowItWorks'
 
 const HomePage = () => {
     return (
@@ -9,6 +10,7 @@ const HomePage = () => {
             <Hero />
             <Services />
             <WhyChoose />
+            <HowItWorks />
         </div>
     )
 }

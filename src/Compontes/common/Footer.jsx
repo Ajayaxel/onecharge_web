@@ -27,8 +27,8 @@ const Footer = () => {
     ];
 
     return (
-        <footer className="w-full bg-black text-white pt-10 pb-6 px-4 md:px-8 lg:px-12">
-            <div className="max-w-full mx-auto">
+        <footer className="bg-black text-white m-2 lg:mx-[10px] rounded-lg">
+            <div className="max-w-full mx-auto pt-16 pb-6 px-4 md:px-10">
                 {/* Contact Cards Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-16">
                     {contactInfo.map((item) => (
@@ -38,7 +38,7 @@ const Footer = () => {
                         >
                             {item.title ? (
                                 <>
-                                    <h3 className="text-4xl font-semibold mb-2">{item.title}</h3>
+                                    <h3 className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-2 bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">{item.title}</h3>
                                     <p className="text-gray-400 text-sm leading-relaxed max-w-[200px]">
                                         {item.description}
                                     </p>
