@@ -5,7 +5,7 @@ import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
 import './WhyChoose.css'
-import phoneframe1 from '../assets/phoneframe1.png'
+import phoneframe1 from '../../assets/phoneframe1.png'
 
 const WhyChoose = () => {
     const features = [
@@ -75,13 +75,13 @@ const WhyChoose = () => {
     }
 
     return (
-        <section className="w-full bg-white h-auto py-10 md:py-16 lg:py-20">
-            <div className="container mx-auto px-4 md:px-6 w-full">
+        <section className="bg-[#F5F5F5] h-auto m-2 lg:mx-[10px] rounded-lg">
+            <div className="container  mx-auto px-4 md:px-6 w-full">
 
 
 
                 {/* Grey Container with Carousel */}
-                <div className="bg-[#F5F5F5] rounded-lg px-4 md:px-8 lg:px-12 py-4 md:py-6 lg:py-10 flex flex-col min-h-[400px] md:min-h-[500px] overflow-hidden">
+                <div className=" rounded-lg px-4 md:px-8 lg:px-12 py-4 md:py-6 lg:py-10 flex flex-col min-h-[400px] md:min-h-[500px] overflow-hidden">
                     {/* Header aligned with card content */}
                     <div className="mb-6 md:mb-8 lg:mb-10 flex justify-center px-4">
                         <div className="w-full max-w-[1192px]">
