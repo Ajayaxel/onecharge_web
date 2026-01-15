@@ -121,20 +121,20 @@ const Services = () => {
                         >
                             {/* Text Content */}
                             <motion.div
-                                className="mb-6 text-center"
+                                className="mb-6 text-center mt-20"
                                 initial="hidden"
                                 whileInView="visible"
                                 viewport={{ once: true, amount: 0.1 }}
                                 variants={containerVariants}
                             >
                                 <motion.h3
-                                    className={`text-2xl md:text-3xl lg:text-[36px] font-bold mb-3 ${service.darkBg ? 'text-white' : 'text-black'}`}
+                                    className={`text-3xl md:text-4xl lg:text-[42px] font-medium mb-4 ${service.darkBg ? 'text-white' : 'text-black'}`}
                                     variants={textVariants}
                                 >
                                     {service.title}
                                 </motion.h3>
                                 <motion.p
-                                    className={`text-sm md:text-base ${service.darkBg ? 'text-gray-300' : 'text-gray-600'} leading-relaxed`}
+                                    className={`text-base font-medium ${service.darkBg ? 'text-gray-300' : 'text-gray-600'} leading-relaxed`}
                                     variants={textVariants}
                                 >
                                     {service.description}
