@@ -17,3 +17,31 @@ body {
   min-height: 100vh;
   background-color: #FFFFFF;
 }
+
+@keyframes twist {
+
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+
+  20% {
+    transform: rotate(-25deg);
+  }
+
+  40% {
+    transform: rotate(20deg);
+  }
+
+  60% {
+    transform: rotate(-10deg);
+  }
+
+  80% {
+    transform: rotate(5deg);
+  }
+}
+
+.animate-twist {
+  animation: twist 6s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+}

@@ -27,7 +27,7 @@ const Footer = () => {
     ];
 
     return (
-        <footer className="bg-black text-white m-2 lg:mx-[10px] rounded-lg">
+        <footer id="contact" className="bg-black text-white m-2 lg:mx-[10px] rounded-lg">
             <div className="max-w-full mx-auto pt-16 pb-6 px-4 md:px-10">
                 {/* Contact Cards Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-16">
